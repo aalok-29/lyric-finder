@@ -21,7 +21,7 @@ function Lyrics() {
 //     setLyrics(res.data.message.body.lyrics.lyrics_body);
     
 //   })
-            axios.get(`https://cors-anywhere.herokuapp.com/https://api.musixmatch.com/ws/1.1/matcher.lyrics.get?q_track=${track}&q_artist=${artist}&apikey=1538e2542ebac4878de127b5193d9854`).then(res => {
+            axios.get(`/matcher.lyrics.get?q_track=${track}&q_artist=${artist}&apikey=1538e2542ebac4878de127b5193d9854`).then(res => {
            setLyrics(res.data.message.body.lyrics.lyrics_body);
         })
         .catch(err => {console.log(err);setLyrics("An ERROR occured please try again")})
